@@ -1,0 +1,10 @@
+web:
+  build: .
+  ports:
+   - "8080:8080"
+  volumes:
+   - example/tilestache.cfg:/var/tilestache/tilestache.cfg:ro
+  links:
+   - redis
+redis:
+  image: redis
