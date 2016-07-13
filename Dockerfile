@@ -32,7 +32,7 @@ RUN pip install \
     Blit \
     jinja2 \
     mapnik2 \
-    --allow-external PIL --allow-unverified PIL PIL \
+    Pillow \
     boto \
     redis \
     simplejson \
@@ -45,7 +45,6 @@ VOLUME ["/var/tilestache"]
 
 WORKDIR /var/tilestache
 
-COPY ./docker-entrypoint.sh /docker-entrypoint.sh
 COPY ./application.wsgi /var/tilestache/application.wsgi
 
 EXPOSE 8080

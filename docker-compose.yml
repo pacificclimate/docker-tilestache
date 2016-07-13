@@ -3,7 +3,7 @@ web:
   ports:
    - "8080:8080"
   volumes:
-   - example/tilestache.cfg:/var/tilestache/tilestache.cfg:ro
+   - .:/var/tilestache
   links:
    - redis
 redis:
